@@ -1,0 +1,65 @@
+<p-toolbar class="custom-toolbar">
+  <div class="p-toolbar-group-left">
+    <a href="/">
+      <img src="assets/logoF.png" alt="Logo" class="logo">
+    </a>
+
+    <p-menubar class="custom-menubar">
+      <ng-template pTemplate="start">
+        <ul>
+          <li>
+            <a routerLink="/">
+              <i class="pi pi-home"></i>
+              Home
+            </a>
+          </li>
+          <li *ngIf="IsAuthenticated">
+            <a routerLink="/offers">
+              <i class="pi pi-briefcase"></i>
+              Offers
+            </a>
+          </li>
+          <li>
+            <a routerLink="/about">
+              <i class="pi pi-info-circle"></i>
+              About
+            </a>
+          </li>
+          <li>
+            <a routerLink="/contact">
+              <i class="pi pi-envelope"></i>
+              Contact
+            </a>
+          </li>
+        </ul>
+      </ng-template>
+    </p-menubar>
+  </div>
+
+  <div class="p-toolbar-group-right">
+    <p-menubar class="custom-menubar">
+      <ng-template pTemplate="start">
+        <ul>
+          <li *ngIf="!IsAuthenticated">
+            <a routerLink="/login">
+              <i class="pi pi-sign-in"></i>
+              Login
+            </a>
+          </li>
+          <li *ngIf="!IsAuthenticated">
+            <a routerLink="/register">
+              <i class="pi pi-user-plus"></i>
+              Register
+            </a>
+          </li>
+          <li *ngIf="IsAuthenticated">
+            <a (click)="logout()">
+              <i class="pi pi-sign-out"></i>
+              Logout
+            </a>
+          </li>
+        </ul>
+      </ng-template>
+    </p-menubar>
+  </div>
+</p-toolbar>

@@ -1,0 +1,18 @@
+<div class="register-form">
+  <h2>Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="p-fluid">
+      <div class="p-field">
+        <label for="email">Email</label>
+        <input id="email" type="email" pInputText formControlName="email" />
+      </div>
+      <div class="p-field">
+        <label for="password">Password</label>
+        <input id="password" type="password" pPassword formControlName="password" />
+      </div>
+      <div class="p-field">
+        <button pButton type="submit" label="Login" [disabled]="loginForm.invalid"></button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,55 @@
+<div class="add-job-offer-container">
+  <h2>Add Job Offer</h2>
+
+  <form (ngSubmit)="onSubmit()" #jobOfferForm="ngForm">
+    <div class="form-group">
+      <label for="jobTitle">Job Title:</label>
+      <input
+        type="text"
+        id="jobTitle"
+        required
+        [(ngModel)]="jobOffer.jobTitle"
+        name="jobTitle"
+        class="form-input"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="jobDescription">Job Description:</label>
+      <textarea
+        id="jobDescription"
+        required
+        [(ngModel)]="jobOffer.jobDescription"
+        name="jobDescription"
+        class="form-textarea"
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="requiredSkills">Required Skills:</label>
+      <input
+        type="text"
+        id="requiredSkills"
+        required
+        [(ngModel)]="jobOffer.requiredSkills"
+        name="requiredSkills"
+        class="form-input"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="experienceRequired">Experience Required (in years):</label>
+      <input
+        type="number"
+        id="experienceRequired"
+        required
+        [(ngModel)]="jobOffer.experienceRequiredInYears"
+        name="experienceRequired"
+        class="form-input"
+      />
+    </div>
+
+    <button type="submit" class="submit-button">Add Job Offer</button>
+    <button type="button" class="cancel-button" (click)="cancel()">Cancel</button>
+  </form>
+</div>

@@ -1,0 +1,53 @@
+<div class="file-download-container">
+  <button class="back-button" (click)="goBack()">Back to Offer</button>
+
+  <h2 class="job-title">{{ jobName }}</h2>
+
+  <input
+    type="text"
+    placeholder="Search by file name"
+    [(ngModel)]="searchTerm"
+    class="search-input"
+  />
+
+  <!-- Rating System Explanation -->
+  <p class="rating-explanation">
+    Our rating system is based on the experience level and the skills that match the job description requirements.
+  </p>
+
+  <!-- Filter Options -->
+  <div class="filter-options">
+    <select [(ngModel)]="filterType" class="filter-select">
+      <option value="overall">Overall Rate</option>
+      <option value="skills">Skill Rate</option>
+      <option value="experience">Experience Rate</option>
+    </select>
+  </div>
+
+  <ul class="candidates-list">
+    <li
+      *ngFor="let candidate of filteredCandidates()"
+      class="candidate-item"
+    >
+      <span class="candidate-name">{{ candidate.originalName }}</span>
+
+      <div class="candidate-info">
+        <!-- Overall Rate -->
+        <span class="candidate-rate"
+              [style.color]="getRateColor(candidate.Rate)">Rate: {{ candidate.Rate }}</span>
+
+        <!-- Skill Rate -->
+        <span class="candidate-skill-rate"
+              [style.color]="getRateColor(candidate.SkillsRate)">Skill Rate: {{ candidate.SkillsRate }}</span>
+
+        <!-- Experience Rate -->
+        <span class="candidate-experience-rate"
+              [style.color]="getRateColor(candidate.ExpRate)">Experience Rate: {{ candidate.ExpRate }}</span>
+      </div>
+
+      <button class="download-button" (click)="onDownload(candidate.id)">
+        Download
+      </button>
+    </li>
+  </ul>
+</div>

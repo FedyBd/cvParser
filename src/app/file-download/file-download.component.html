@@ -1,0 +1,9 @@
+<!-- src/app/file-download/file-download.component.html -->
+<div>
+  <ul>
+    <li *ngFor="let file of files">
+      {{ file.originalName }}
+      <button (click)="onDownload(file.id)">Download</button>
+    </li>
+  </ul>
+</div>
