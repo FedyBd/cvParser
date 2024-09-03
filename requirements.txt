@@ -1,0 +1,16 @@
+Flask==3.0.3
+Flask-MySQLdb==2.0.0
+mysqlclient==2.2.4
+opencv-python==4.10.0.84
+numpy
+matplotlib
+Pillow
+pytesseract==0.3.13
+google-generativeai==0.1.0rc1
+ultralytics==8.2.2
+torch
+torchvision
+tqdm
+requests
+pdf2image==1.17.0
+pdfplumber==0.11.4
