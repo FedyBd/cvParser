@@ -34,7 +34,21 @@ This Flask server provides an endpoint for processing CV files. When a CV is upl
 - pdf2image 1.17.0
 - pdfplumber 0.11.4
 
-## installation
+  
+## Running the Flask Server
 
+Follow these steps to run the Flask server on your local machine:
 
+1. **Clone the Repository**:
 
+   If you haven't already done so, clone the repository to your local machine:
+
+   ```bash
+   git clone https://github.com/FedyBd/cvParser.git
+   cd cvParser
+
+2. **install the requirements**:
+   ```bash
+   pip install -r requirements.txt
+3. **Run**:
+  run the main File : "server.py"
