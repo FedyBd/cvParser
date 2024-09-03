@@ -27,7 +27,7 @@ Contact: Offers contact details and a form for users to reach out for support or
 
    ```bash
    git clone https://github.com/FedyBd/cvParser.git
-   cd job-portal-frontend
+   cd cvParser
    git checkout frontend
 
 2. install requirements
