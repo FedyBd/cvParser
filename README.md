@@ -25,18 +25,14 @@ This Flask server provides an endpoint for processing CV files. When a CV is upl
 - PIL
 - pytesseract 0.3.13
 - google-generativeai  0.1.0rc1
+- ultralytics 8.2.2
+- torch 
+- torchvision
+- tqdm
 - re
 - requests
 - pdf2image 1.17.0
 - pdfplumber 0.11.4
 
-2. trainYOLOcvs
-- python 3.8
-- flask 3.0.3
-- request
-- jsonify
-- ultralytics 8.2.2
-- torch 1.10.1+cu102
-- torchvision 0.11.2+cu102
-- tqdm 4.66.2
+
 
