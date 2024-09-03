@@ -26,7 +26,7 @@ Contact: Offers contact details and a form for users to reach out for support or
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/job-portal-frontend.git
+   git clone https://github.com/FedyBd/cvParser.git
    cd job-portal-frontend
    git checkout frontend
 
