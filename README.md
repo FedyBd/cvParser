@@ -19,3 +19,17 @@ Apply to Jobs: Candidates can apply to job offers by uploading their CVs, which 
 Home: Provides an overview of the platform.
 About: Contains information about the platform, its purpose, and its features.
 Contact: Offers contact details and a form for users to reach out for support or inquiries.
+
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/job-portal-frontend.git
+   cd job-portal-frontend
+   git checkout frontend
+
+2. install requirements
+   ```bash
+   npm install
