@@ -34,5 +34,7 @@ This Flask server provides an endpoint for processing CV files. When a CV is upl
 - pdf2image 1.17.0
 - pdfplumber 0.11.4
 
+## installation
+
 
 
