@@ -4,7 +4,7 @@ from ultralytics import YOLO
 import torch
 from flask import jsonify
 
-def load_model(model_path, use_cuda=False):
+def load_model(model_path, use_cuda=torch.cuda.is_available()):
     """
     Loads a YOLO model from the specified .pt file.
 
