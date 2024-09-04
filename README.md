@@ -15,3 +15,7 @@ This API manages user interactions, handles business logic, and communicates wit
 # Flask Server (flaskserver branch):
 Contains a Flask API that processes the CVs.
 This server is responsible for parsing the CV content, performing any necessary transformations, and saving the results to the database.
+
+
+# Setting Up the MySQL Database
+Before running the application, you'll need to set up a MySQL database called cvs. This database will be used by both the NestJS and Flask servers.
