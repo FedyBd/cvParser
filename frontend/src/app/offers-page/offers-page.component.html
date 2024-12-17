@@ -1,0 +1,35 @@
+<!-- Image Section -->
+<div class="image-container">
+  <img src="assets/coverP.png" alt="Job Offers" class="offer-image" />
+</div>
+
+<div class="search-container">
+  <input
+    type="text"
+    placeholder="Search by job title..."
+    [(ngModel)]="searchTerm"
+    (ngModelChange)="filterOffers()"
+  />
+</div>
+
+
+<!-- Add Job Offer Button -->
+<div *ngIf="userType=='recruiter'" class="add-offer-container">
+  <button class="add-offer-button" (click)="addJobOffer()">
+    <i class="pi pi-plus"></i> Add Job Offer
+  </button>
+</div>
+
+
+
+<div class="offer-container">
+  <p>{{ loginMessage }}</p>
+  <div class="offer-box" *ngFor="let offer of filteredOffers">
+    <h2>{{ offer.jobTitle }}</h2>
+    <p>Company: {{ offer.owner.username }}</p>
+    <p>{{ offer.jobDescription | slice:0:100 }}{{ offer.jobDescription.length > 100 ? '...' : '' }}</p>
+    <p>Required Skills: {{ offer.requiredSkills }}</p> <!-- Display required skills -->
+    <p>Experience Required: {{ offer.experienceRequiredInYears }} years</p> <!-- Display experience required -->
+    <button (click)="goToOfferDetails(offer.id)">More Details</button>
+  </div>
+</div>

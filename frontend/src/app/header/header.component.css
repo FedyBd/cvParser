@@ -1,0 +1,45 @@
+.custom-toolbar {
+
+  color: #ffffff;
+  padding: 10px;
+  margin:0;
+}
+
+.custom-toolbar .logo {
+  height: 50px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.custom-menubar {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+}
+
+.custom-menubar ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-menubar ul li {
+  cursor:pointer;
+  margin-right: 20px;
+}
+
+.custom-menubar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.custom-menubar ul li a i {
+  margin-right: 5px;
+}
+
+.custom-menubar ul li a:hover {
+  color: #17a2b8;
+}

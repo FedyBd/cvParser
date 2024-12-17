@@ -1,0 +1,46 @@
+<div class="offer-details-container">
+  <h1>{{ offer.jobTitle }}</h1>
+  <p><strong>Company:</strong> {{ offer.owner.username }}</p>
+
+  <p><strong>Job Description:</strong></p>
+  <div *ngIf="isEditing; else displayJobDescription">
+    <textarea [(ngModel)]="offer.jobDescription"></textarea>
+  </div>
+  <ng-template #displayJobDescription>
+    <p>{{ offer.jobDescription }}</p>
+  </ng-template>
+
+  <p><strong>Required Skills:</strong></p>
+  <div *ngIf="isEditing; else displayRequiredSkills">
+    <input type="text" [(ngModel)]="offer.requiredSkills" placeholder="Enter required skills" />
+  </div>
+  <ng-template #displayRequiredSkills>
+    <p>{{ offer.requiredSkills }}</p>
+  </ng-template>
+
+  <p><strong>Experience Required:</strong></p>
+  <div *ngIf="isEditing; else displayExperienceRequired">
+    <input type="number" [(ngModel)]="offer.experienceRequiredInYears" placeholder="Enter required experience in years" />
+  </div>
+  <ng-template #displayExperienceRequired>
+    <p>{{ offer.experienceRequiredInYears }} years</p>
+  </ng-template>
+
+  <div *ngIf="isRecruiter">
+    <button *ngIf="!isEditing" (click)="editOffer()">Modify</button>
+    <button *ngIf="isEditing" (click)="confirmChanges()">Confirm Changes</button>
+    <button *ngIf="isEditing" (click)="cancelChanges()">Cancel</button>
+  </div>
+
+  <p class="already-applied-message" *ngIf="disabled">You have already applied for this job.</p>
+
+  <!-- File Input and Upload Button -->
+  <div *ngIf="!isRecruiter" class="upload-container">
+    <input type="file" (change)="onFileChange($event)" />
+    <button (click)="onUpload()" [disabled]="disabled">Upload Resume</button>
+  </div>
+
+  <div *ngIf="isRecruiter" class="upload-container">
+    <button (click)="getCandidates()">Visualize Candidates</button>
+  </div>
+</div>

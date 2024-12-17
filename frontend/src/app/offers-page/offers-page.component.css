@@ -1,0 +1,119 @@
+.offer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the offer boxes */
+  gap: 20px; /* Space between boxes */
+  padding: 20px;
+}
+
+.offer-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  height: 350px; /* Set a consistent height for the boxes */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.offer-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.offer-box h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.offer-box p {
+  font-size: 1em;
+  margin-bottom: 15px;
+  color: #555;
+  flex-grow: 1; /* Allow the description to take up available space */
+}
+
+.offer-box button {
+  align-self: flex-end; /* Align the button to the bottom */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.offer-box button:hover {
+  background-color: #0056b3;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center; /* Center the search bar horizontally */
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 300px; /* Set a fixed width for the search bar */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-offer-container {
+  margin: 20px 0; /* Add some space around the button */
+  text-align: center; /* Center align the button */
+}
+
+.add-offer-button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 12px 20px; /* Padding for button */
+  text-align: center; /* Center text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Allow setting width */
+  font-size: 16px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.add-offer-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.image-container {
+  text-align: center; /* Center the image */
+  margin: 20px 0; /* Add some space above and below the image */
+}
+
+.offer-image {
+  max-width: 70%; /* Make the image responsive */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 8px; /* Optional: add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add shadow for depth */
+}
+
+/* Media query to adjust layout for small screens */
+@media (min-width: 600px) {
+  .offer-box {
+    flex: 1 1 calc(33.333% - 40px); /* Ensure at most 3 per row */
+    max-width: calc(33.333% - 40px);
+  }
+}
+
+/* Additional media query for smaller devices */
+@media (max-width: 600px) {
+  .offer-box {
+    flex: 1 1 100%; /* Stack vertically on small screens */
+    max-width: 100%; /* Full width */
+  }
+}

@@ -1,0 +1,58 @@
+<div class="about-container">
+  <!-- Image Section -->
+  <div class="about-image">
+    <img src="assets/val_batch2_pred.jpg" alt="JobHunter">
+  </div>
+
+  <!-- Content Section -->
+  <div class="about-content">
+    <!-- Header Section -->
+    <div class="about-header">
+      <h1>About JobHunter</h1>
+      <p>We are dedicated to transforming the recruitment experience in Tunisia through innovative technology and human-centric solutions.</p>
+    </div>
+
+    <!-- Mission Statement Section -->
+    <div class="mission-section">
+      <h2>Our Mission</h2>
+      <p>
+        Our mission is to connect talented candidates with the right opportunities and to empower recruiters with the tools they need to make informed hiring decisions.
+        We strive to create a seamless recruitment process that benefits both employers and job seekers.
+      </p>
+    </div>
+  </div>
+
+  <!-- Values Section -->
+  <div class="values-section">
+    <h2>Our Values</h2>
+    <div class="values-cards">
+      <div class="value-card">
+        <i class="pi pi-heart"></i>
+        <h3>Integrity</h3>
+        <p>We believe in honesty, transparency, and upholding the highest ethical standards in all our interactions.</p>
+      </div>
+      <div class="value-card">
+        <i class="pi pi-users"></i>
+        <h3>Collaboration</h3>
+        <p>We foster teamwork and believe that collaboration leads to the best solutions.</p>
+      </div>
+      <div class="value-card">
+        <i class="pi pi-cog"></i>
+        <h3>Innovation</h3>
+        <p>We are constantly innovating to stay ahead in the recruitment industry.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Section -->
+  <div class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-cards">
+      <div class="team-card" *ngFor="let member of teamMembers">
+        <img [src]="member.photo" alt="{{member.name}}">
+        <h3>{{member.name}}</h3>
+        <p>{{member.position}}</p>
+      </div>
+    </div>
+  </div>
+</div>
