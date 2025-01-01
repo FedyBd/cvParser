@@ -28,7 +28,7 @@ The **Backend** directory is built using NestJS, a progressive Node.js framework
 The **FlaskServer** directory contains the Python-based Flask server that powers the AI functionalities, including CV parsing and skill extraction. The AI components of the platform include:
 - **YOLOv8**: Used for detecting and extracting relevant details from CVs, including images and text.
 - **Pytesseract**: Integrated Optical Character Recognition (OCR) tool to read and extract text from scanned CVs.
-- **Gemini 1.5flash API**: Used to improve the precision of information extraction, ensuring higher accuracy in matching skills and experience from CVs to job offers.
+- **Gemini 1.5 flash API**: Used to improve the precision of information extraction, ensuring higher accuracy in matching skills and experience from CVs to job offers.
 
 ---
 
@@ -38,7 +38,7 @@ The **FlaskServer** directory contains the Python-based Flask server that powers
 - **Job Offer Management**: Employers can add, edit, and manage job offers through the web interface.
 - **Application Tracking**: Applicants can track the status of their job applications and recruiters can view all incoming applications.
 - **Authentication**: User authentication is handled using JWT for secure login and access.
-- **Integration with Gemini 1.5flash API**: The platform calls the Gemini 1.5flash API to enhance precision in skill and experience matching.
+- **Integration with Gemini 1.5 flash API**: The platform calls the Gemini 1.5flash API to enhance precision in skill and experience matching.
 
 ---
 
@@ -46,9 +46,9 @@ The **FlaskServer** directory contains the Python-based Flask server that powers
 
 - **Frontend**: Angular
 - **Backend**: NestJS
-- **AI/FlaskServer**: Flask, YOLOv8, Pytesseract, Gemini 1.5flash API
+- **AI/FlaskServer**: Flask, YOLOv8, Pytesseract, Gemini 1.5flash APMySQL
 - **Authentication**: JWT (JSON Web Tokens)
-- **Database**: (Specify database, e.g., MongoDB, PostgreSQL, etc. if applicable)
+- **Database**: MySQL
 
 ---
 
@@ -58,8 +58,8 @@ To set up the project locally, follow these steps:
 
 ### 1. **Clone the repository**:
 ```bash
-git clone <repository_url>
-cd <repository_name>
+git clone github.com/FedyBd/cvParser
+cd cvParser 
 ```
 ### 2. Frontend Setup:
 Navigate to the frontend directory and install the required dependencies:
@@ -95,5 +95,3 @@ Run the Flask server:
 ```bash
 python app.py
 ```
-### 5. Environment Variables:
-Make sure to configure any environment variables required for the project, such as JWT secret keys, database connection strings, and API keys for external services like Gemini 1.5flash.
